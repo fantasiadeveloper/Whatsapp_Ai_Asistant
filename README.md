@@ -22,3 +22,4 @@ Perlu diingat bahwa WhatsApp tidak mengizinkan penggunaan bot pada nomor pribadi
 
 ### Jalankan Bot
 Setelah mengonfigurasi kunci API, Anda dapat menjalankan bot dengan perintah berikut:
+`Node ai_gemini.js`
