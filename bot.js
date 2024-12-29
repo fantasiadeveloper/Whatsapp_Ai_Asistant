@@ -1,7 +1,10 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client, LocalAuth } = require("whatsapp-web.js");
 const qrcode = require("qrcode-terminal");
-require('dotenv').config();
+
+// API Key langsung di dalam kode
+const API_KEY = "AIzaSyAq7pHX8PSieoYEBVLNFnZfWhZHbxWMAVw";
+
 // Nomor Firman
 const firmanNumber = "62895703023772@c.us"; // Format nomor untuk WhatsApp Web
 
@@ -56,8 +59,7 @@ function addToConversationHistory(user, message) {
 
 // Fungsi untuk mengakses AI dan memberikan respons berdasarkan riwayat percakapan
 async function generateResponse(userMessage, user) {
-    const apiKey = process.env.API_KEY;
-    const genAI = new GoogleGenerativeAI(apiKey);
+    const genAI = new GoogleGenerativeAI(API_KEY); // Gunakan API_KEY langsung di sini
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
 
     try {
